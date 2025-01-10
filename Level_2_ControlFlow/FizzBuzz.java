@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class FizzBuzz {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking input number from user
+        System.out.print("Enter a positive integer: ");
+        int number = sc.nextInt();
+
+        // Check if the number is positive or not
+        if (number > 0) {
+            // Loop starting from 0 to the number
+            for (int i = 0; i <= number; i++) {
+                if (i % 3 == 0 && i % 5 == 0) {
+                    System.out.println("FizzBuzz");
+                } else if (i % 3 == 0) {
+                    System.out.println("Fizz");
+                } else if (i % 5 == 0) {
+                    System.out.println("Buzz");
+                } else {
+                    System.out.println(i);
+                }
+            }
+        } else {
+            System.out.println("Please enter a positive integer.");
+        }
+
+        sc.close();
+    }
+}
